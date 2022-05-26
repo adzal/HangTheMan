@@ -48,7 +48,7 @@ public class Main {
             String guess = sc.nextLine().toLowerCase();
             game.MakeGuess(guess);
 
-            //Affiche le Gallows et les messages
+            //Affiche le gibet et les messages
             String[] gallows = getGallows(game.getTrys());
             System.out.println("");
             System.out.println(gallows[0] + "\t\tprevious guesses");
