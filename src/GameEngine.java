@@ -45,10 +45,8 @@ public class GameEngine {
     private void UpdateStatus() {
         char[] charArr = selectedWord.toCharArray();
         currentStatus = "";
-        Boolean isAnyWrong = false;
-        for (int i = 0; i < charArr.length; i++) {
-            char letter = charArr[i];
-
+        boolean isAnyWrong = false;
+        for (char letter : charArr) {
             if (letter == ' ') {
                 currentStatus += "  ";
             } else if (previousCorrectGuesses.indexOf(letter) >= 0) {
@@ -69,8 +67,8 @@ public class GameEngine {
         char[] charArr = previousWrongGuesses.toCharArray();
         String retVal = "";
         //mit un espace entre chaque lettre
-        for (int i = 0; i < charArr.length; i++) {
-            retVal += charArr[i] + " ";
+        for (char element : charArr) {
+            retVal += element + " ";
         }
         return retVal;
     }
@@ -80,8 +78,7 @@ public class GameEngine {
         message = "";
 
         //On peut saisir plusieurs letters donc boucle jusqu'a la fin
-        for (int i = 0; i < charArr.length; i++) {
-            char guess = charArr[i];
+        for (char guess : charArr) {
             int pos = selectedWord.indexOf(guess);
 
             //Si on a déjà fait cette lettre ignore la

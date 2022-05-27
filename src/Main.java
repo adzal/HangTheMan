@@ -83,7 +83,7 @@ public class Main {
     }
 
     private static void PlayColorsGame() {
-        ArrayList<String> colors = new ArrayList<String>() {
+        ArrayList<String> colors = new ArrayList<>() {
             {
                 add("red");
                 add("yellow");
@@ -103,12 +103,12 @@ public class Main {
     }
 
     private static void PlayMoviesGame() {
-        ArrayList<String> movies = new ArrayList<String>() {
+        ArrayList<String> movies = new ArrayList<>() {
             {
                 add("The Shawshank Redemption");
                 add("The Godfather");
                 add("The Dark Knight");
-                add("Pulp Fiction	");
+                add("Pulp Fiction");
                 add("The Good the Bad and the Ugly");
                 add("Forrest Gump");
                 add("Fight Club");
@@ -193,7 +193,7 @@ public class Main {
     }
 
     private static void PlayMovieStarsGame() {
-        ArrayList<String> stars = new ArrayList<String>() {
+        ArrayList<String> stars = new ArrayList<>() {
             {
                 add("robert de niro");
                 add("jack nicholson");
@@ -220,5 +220,4 @@ public class Main {
         System.out.println("Welcome to Hang the man,\nguess the name of a movie star");
         GameLoop(stars);
     }
-
 }
