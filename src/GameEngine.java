@@ -8,7 +8,6 @@ public class GameEngine {
     private String currentStatus = "";
     private String message = "";
     private int trys = 0;
-    private int maxTrys = 6;
     private Boolean isGameOver = false;
     private Boolean isWinner;
 
@@ -97,7 +96,7 @@ public class GameEngine {
                 }
 
                 //Trop tard, on a perdu
-                if (trys == maxTrys) {
+                if (trys == 6) {
                     gameOver(false, "You've been hung.. answer was (" + selectedWord + ")");
                 }
 

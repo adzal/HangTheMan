@@ -10,12 +10,12 @@ public class Main {
     public static void main(String[] args) {
         String choice = "";
         do {
-            System.out.println("");
+            System.out.println();
             System.out.println("Let's play Hang The Man, what game do you want?");
             System.out.println("1. Colour Game");
             System.out.println("2. Movies Game");
             System.out.println("3. Movies Stars Game");
-            System.out.println("");
+            System.out.println();
             System.out.println("Q. Quit");
             System.out.print(">");
 
@@ -50,7 +50,7 @@ public class Main {
 
             //Affiche le gibet et les messages
             String[] gallows = getGallows(game.getTrys());
-            System.out.println("");
+            System.out.println();
             System.out.println(gallows[0] + "\t\tprevious guesses");
             System.out.println(gallows[1] + "\t\t" + game.getPreviousWrongGuesses());
             System.out.println(gallows[2]);
@@ -61,19 +61,12 @@ public class Main {
 
             System.out.println(game.getMessage());
         }
-
-        //Game Over pause 2 seconds pour afficher le message
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-        }
-
     }
 
     private static String[] getGallows(int trys) {
         String[] gallows = new String[7];
         gallows[0] = "+====+ ";
-        gallows[1] = "|    | ";
+        gallows[1] = "|/   | ";
         gallows[2] = String.format("|    %s ", trys > 0 ? "O" : " ");
         gallows[3] = String.format("|   %s%s%s", trys > 1 ? "-" : " ", trys > 2 ? "|" : " ", trys > 3 ? "-" : " ");
         gallows[4] = String.format("|   %s %s", trys > 4 ? "/" : " ", trys > 5 ? "\\" : " ");
